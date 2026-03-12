@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ENACTS — Early-career Network for AI, Culture, Technology &amp; Society</title>
+  <meta name="description" content="ENACTS brings together early-career researchers across the social sciences, humanities and computer science working at the intersection of AI, culture and society.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◈</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">EN<span>ACTS</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">About</a></li>
+        <li><a href="news.html">News &amp; Events</a></li>
+        <li><a href="team.html">Team</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-label">Early-career Network for AI, Culture, Technology &amp; Society</span>
+      <h1>Exploring how AI shapes — and is shaped by — society, politics, and culture</h1>
+      <p class="hero-description">
+        The global rise of artificial intelligence has brought about a range of complex questions about the way in which AI increasingly shapes, and is shaped by, society, politics, and culture. ENACTS brings together a community of like-minded early-career researchers across the social sciences, humanities and computer science who work in this interdisciplinary field — and who should probably meet.
+      </p>
+      <div class="hero-cta">
+        <a href="news.html" class="btn btn-primary">Upcoming Events</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Mission -->
+  <section class="section" id="about">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title">Building bridges across disciplines</h2>
+        <p class="section-subtitle">
+          By organising events, workshops and speaker series to present work-in-progress, we aim to build a collaborative and supportive network.
+        </p>
+      </div>
+      <div class="pillars fade-in">
+        <div class="pillar">
+          <div class="pillar-icon">⬡</div>
+          <h3>Exchange Ideas</h3>
+          <p>We create spaces for researchers to share perspectives across disciplinary boundaries — from computer science to the humanities — fostering dialogue on the societal implications of AI.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">⬡</div>
+          <h3>Build Relationships</h3>
+          <p>Our events and workshops are designed to connect early-career researchers who might not otherwise cross paths, building lasting professional relationships and a sense of community.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">⬡</div>
+          <h3>Collaborate</h3>
+          <p>Through work-in-progress presentations and interdisciplinary workshops, we encourage new collaborations that bring together diverse methodologies and research traditions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to action -->
+  <section class="section section-alt">
+    <div class="section-inner fade-in" style="text-align: center; max-width: 640px; margin: 0 auto;">
+      <span class="section-label">Get Involved</span>
+      <h2 class="section-title">Join the network</h2>
+      <p style="color: var(--color-muted); margin-top: 1rem; line-height: 1.8;">
+        Are you an early-career researcher working on questions related to AI, culture and society? We'd love to hear from you. Reach out to learn more about upcoming events and how to get involved.
+      </p>
+      <div style="margin-top: 2rem;">
+        <a href="mailto:enacts@example.com" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">EN<span>ACTS</span></div>
+        <p class="footer-text" style="margin-top: 0.3rem;">Early-career Network for AI, Culture, Technology &amp; Society</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html">About</a></li>
+        <li><a href="news.html">News &amp; Events</a></li>
+        <li><a href="team.html">Team</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // Hamburger toggle
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+
+    // Scroll shadow on nav
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

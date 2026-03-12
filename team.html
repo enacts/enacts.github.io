@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team — ENACTS</title>
+  <meta name="description" content="Meet the people behind the ENACTS network.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◈</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">EN<span>ACTS</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">About</a></li>
+        <li><a href="news.html">News &amp; Events</a></li>
+        <li><a href="team.html" class="active">Team</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="page-header-inner">
+      <span class="section-label">Our People</span>
+      <h1 class="section-title" style="font-size: clamp(2rem, 4vw, 2.8rem);">The Team</h1>
+      <p class="section-subtitle">ENACTS is run by early-career researchers passionate about understanding AI's role in society, culture, and politics.</p>
+    </div>
+  </header>
+
+  <!-- Organisers -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <span class="section-label">Core Team</span>
+        <h2 class="section-title">Organisers</h2>
+      </div>
+      <div class="team-grid fade-in">
+
+        <!-- Placeholder team members — replace with real info -->
+        <div class="team-card">
+          <div class="team-avatar">AB</div>
+          <h3>Name Surname</h3>
+          <p class="team-role">Co-organiser</p>
+          <p class="team-affiliation">University / Institution</p>
+          <p class="team-bio">Brief description of research interests at the intersection of AI and society.</p>
+          <div class="team-links">
+            <a href="#">Website</a>
+            <a href="#">Twitter</a>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-avatar">CD</div>
+          <h3>Name Surname</h3>
+          <p class="team-role">Co-organiser</p>
+          <p class="team-affiliation">University / Institution</p>
+          <p class="team-bio">Brief description of research interests at the intersection of AI and society.</p>
+          <div class="team-links">
+            <a href="#">Website</a>
+            <a href="#">Twitter</a>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-avatar">EF</div>
+          <h3>Name Surname</h3>
+          <p class="team-role">Co-organiser</p>
+          <p class="team-affiliation">University / Institution</p>
+          <p class="team-bio">Brief description of research interests at the intersection of AI and society.</p>
+          <div class="team-links">
+            <a href="#">Website</a>
+            <a href="#">Twitter</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Advisory / Steering (optional section) -->
+  <section class="section section-alt">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <span class="section-label">Get Involved</span>
+        <h2 class="section-title">Join the network</h2>
+        <p class="section-subtitle">Interested in being part of ENACTS? We welcome early-career researchers across all disciplines working on AI and society.</p>
+      </div>
+      <div class="fade-in" style="margin-top: 1.5rem;">
+        <a href="mailto:enacts@example.com" class="btn btn-primary">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">EN<span>ACTS</span></div>
+        <p class="footer-text" style="margin-top: 0.3rem;">Early-career Network for AI, Culture, Technology &amp; Society</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html">About</a></li>
+        <li><a href="news.html">News &amp; Events</a></li>
+        <li><a href="team.html">Team</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
